@@ -220,8 +220,8 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>>
     public AnyType deleteMin() {
         if (root == null) return null;
         AvlNode<AnyType> min = deleteMin(root);
-        if (min == root) 
-            root = null;
+        if (min == root) //if root is the min set the root to root.right incase there is a right child
+            root = root.right;
         root = balance(root);
         return min.element;
     }
