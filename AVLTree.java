@@ -232,7 +232,7 @@ public class AVLTree<AnyType extends Comparable<? super AnyType>>
         
         AvlNode<AnyType> min = deleteMin(t.left);
         if (min == t.left)
-            t.left = min.right; // set t.left equal to min.right incase min has children
+            t.left = min.right; //set t.left equal to min.right incase min has children
         return min;
     }
 
